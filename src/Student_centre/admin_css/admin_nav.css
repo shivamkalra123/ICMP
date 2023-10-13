@@ -1,0 +1,46 @@
+.sidenav {
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00608c;
+    padding-top: 20px;
+    transition: width 0.3s;
+    z-index: 1;
+  
+  }
+  
+  .sidenav.collapsed {
+    width: 80px;
+  }
+  
+  .sidenav a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .toggle-btn {
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    background-color: #444;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #555;
+  }
+
+
+

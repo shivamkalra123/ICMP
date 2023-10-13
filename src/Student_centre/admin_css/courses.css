@@ -1,0 +1,53 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+    width: 80%;
+  
+    margin-left: 10%;
+    
+  }
+.count{
+  
+  background-color: #e5e5ff;
+  height: 100vh;
+}
+.courseHeading{
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 50px;
+  margin-left: 10%;
+  padding: 20px 20px;
+
+}
+
+  .table-heading {
+    grid-column: 1 / span 2;
+    gap:20px;
+
+  
+  }
+ 
+  
+  
+  
+  
+  /* custom.css */
+/* custom.css */
+.table-heading th {
+  background-color: rgb(47, 223, 236);
+  color: white;
+
+  width: 50%; /* Set the width of the heading cells to 50% */
+}
+.column-border th{
+ background-color: transparent;
+  color: black;
+}
+.column-border th,
+.column-border td {
+  border: solid rgb(0, 0, 0,0.2) 1px;
+  text-align: center;
+
+  width: 50%; /* Set the width of the cells in column-border to 50% */
+}

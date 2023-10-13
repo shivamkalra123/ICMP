@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+.background {
+ 
+  position: absolute;
+
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  z-index:-1; /* Place the image behind other elements */
+}
+
+.banner_head{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  
+ 
+  font-family: 'Montserrat', sans-serif;
+
+}
+h2.heading{
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 60px;
+  font-size: 80px;
+  margin-top: 300px;
+  margin-left: 150px;
+  
+
+  
+}
+a.admissions{
+ 
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  border: solid 1px rgb(255, 255, 255);
+  padding: 10px 15px;
+  
+}
+.banner_links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  
+
+}
+
+.banner{
+  position: absolute;
+  background-image: url('https://www.collegiateparent.com/wp-content/uploads/2021/02/4-reasons-college-students-struggle.png');
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  z-index:-1;
+
+}
+.overlay{
+  background-color: rgb(0, 0, 0,0.5);
+  width: 100%;
+  height: 100%;
+}
+p.subtitle{
+  text-transform: capitalize;
+  font-family:sans-serif;
+  letter-spacing: 2px;
+  margin-left: 70px;
+
+}

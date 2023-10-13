@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.containing{
+    width: 80%;
+    margin-left: 10%;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+  
+
+}
+.cover{
+    background-color: #e5e5ff;
+    margin: 0px;
+    padding: 0px;
+}
+.student_heading{
+   
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Darker Grotesque', sans-serif;
+    padding: 30px 40px;
+
+    
+}
+.dashboard{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+   /* Smaller gap between rows */
+   
+    
+}
+.card-image{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.card {
+    margin-left: 10%;
+    width: 120%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+  
+}
+
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.explore-btn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s;
+  
+}
+
+.explore-btn:hover {
+    background-color: #d1d1d1;
+}
+/* styles.css */
+.announcement {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.announcement h3 {
+    margin-top: 0;
+}
+
+.announcement p {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .cards_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .cards_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
