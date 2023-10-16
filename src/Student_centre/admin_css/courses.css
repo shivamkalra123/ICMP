@@ -51,3 +51,34 @@
 
   width: 50%; /* Set the width of the cells in column-border to 50% */
 }
+table {
+  width: 40%;
+  border-collapse: collapse;
+  border: 1px solid rgb(82, 78, 78);
+  margin: auto;
+}
+
+th, td {
+  border-bottom: 1px solid black;
+  padding: 2.5vh;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: blueviolet;
+}
+
+td {
+  text-align: left;
+  text-align: center;
+}
+
+
+tr:last-child {
+  font-weight: bold;
+  background-color: blueviolet;
+  color: white;
+}

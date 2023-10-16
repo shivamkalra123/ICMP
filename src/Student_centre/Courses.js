@@ -9,181 +9,58 @@ const Courses = () => {
     <div className='count'>
       <ParentComponent/>
       <h1 className='courseHeading'>Courses</h1>
-      <div className="grid-container">
-        <div className="grid-item">
-          <table className="table-heading">
-            <thead>
-              <tr>
-                <th>French</th>
-              </tr>
-            </thead>
-          </table>
-          <table className="column-border">
-            <thead>
-              <tr>
-                <th>Course</th>
-                <th>Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>French A1/A2</td>
-                <td>Basic</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>French B1/B2</td>
-                <td>Intermediate</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>French C1/C2</td>
-                <td>Proficient</td>
-              </tr>
-            </tbody>
-          </table>
-          
-        </div>
-        <div className="grid-item">
-          <table className="table-heading">
-            <thead>
-              <tr>
-                <th>German</th>
-              </tr>
-            </thead>
-          </table>
-          <table className="column-border">
-            <thead>
-              <tr>
-                <th>Course</th>
-                <th>Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>German A1/A2</td>
-                <td>Basic</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>German B1/B2</td>
-                <td>Intermediate</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>German C1</td>
-                <td>Proficient</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="grid-item">
-          <table className="table-heading">
-            <thead>
-              <tr>
-                <th>Spanish</th>
-              </tr>
-            </thead>
-          </table>
-          <table className="column-border">
-            <thead>
-              <tr>
-                <th>Course</th>
-                <th>Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Spanish A1/A2</td>
-                <td>Basic</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td>Spanish B1/B2</td>
-                <td>Intermediate</td>
-              </tr>
-            </tbody>
-            
-          </table>
-        </div>
-        <div className="grid-item">
-          <table className="table-heading">
-            <thead>
-              <tr>
-                <th>Dutch</th>
-              </tr>
-            </thead>
-          </table>
-          <table className="column-border">
-            <thead>
-              <tr>
-                <th>Course</th>
-                <th>Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Dutch A1/A2</td>
-                <td>Basic/Intermediate</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="grid-item">
-          <table className="table-heading">
-            <thead>
-              <tr>
-                <th>Table 5</th>
-              </tr>
-            </thead>
-          </table>
-          <table className="column-border">
-            <thead>
-              <tr>
-                <th>Course</th>
-                <th>Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Data Cell 1</td>
-                <td>Data Cell 2</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="grid-item">
-          <table className="table-heading">
-            <thead>
-              <tr>
-                <th>Table 5</th>
-              </tr>
-            </thead>
-          </table>
-          <table className="column-border">
-            <thead>
-              <tr>
-                <th>Course</th>
-                <th>Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Data Cell 1</td>
-                <td>Data Cell 2</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <table>
+        <thead>
+          <tr>
+            <th>SUBJECT</th>
+            <th>CREDITS REQUIRED</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>English</td>
+            <td>4.0</td>
+          </tr>
+          <tr>
+            <td>Math (Integrated Math I, II, & III)</td>
+            <td>3.0</td>
+          </tr>
+          <tr>
+            <td>Science (Biology, Chemistry, Science Elective)</td>
+            <td>3.0</td>
+          </tr>
+          <tr>
+            <td>Social Studies</td>
+            <td>3.0</td>
+          </tr>
+          <tr>
+            <td>Visual and Performing Arts</td>
+            <td>2.0</td>
+          </tr>
+          <tr>
+            <td>Technology and Life Skills</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>Fitness and Health</td>
+            <td>2.0</td>
+          </tr>
+          <tr>
+            <td>Foreign Language</td>
+            <td>2.0</td>
+          </tr>
+          <tr>
+            <td>Electives/Advisory</td>
+            <td>4.5</td>
+          </tr>
+          <tr>
+            <td>TOTAL CREDITS</td>
+            <td>24.5</td>
+          </tr>
+        </tbody>
+      </table>  
       </div>
-   
-    </div>
-    <Footer/>
+
     </div>
   )
 }
