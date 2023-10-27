@@ -18,7 +18,11 @@ header {
 	margin-top: 20%;
 
 }
-
+@media (max-width:769px) {
+	.band{
+		margin-top: 50%;
+	}
+}
 @media (min-width: 30em) {
 	.band {
 		grid-template-columns: 1fr 1fr;
