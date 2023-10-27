@@ -1,56 +1,27 @@
-.add-drop-courses {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-   
-  }
+.vo{
+  margin-left: 20%;
+  display: flex;
   
-  .add-drop-courses h2 {
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
+}
+.addCourses{
+  padding: 30px 90px;
+  font-size: 40px;
   
-  .add-drop-courses ul {
-    list-style-type: none;
-    padding: 0;
-   
-  }
+}
+.selectedCourse{
+  margin-left: 20%;
+}
+.courseRemove{
+  display: flex;
+  font-size: 20px;
   
-  .add-drop-courses li {
-    margin-bottom: 8px;
-    
-  }
-  
-  .add-drop-courses label {
-    display: flex;
-    align-items: center;
-    
-  }
-  
-  .add-drop-courses button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .add-drop-courses button:hover {
-    background-color: #0056b3;
-  }
-  
-  .add-drop-courses h3 {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-  
-  .add-drop-courses p {
-    font-size: 16px;
-    color: #555;
-  }
+}
+td{
+  text-align: center;
+}
+span{
+  padding: 30px 90px;
+}
+
+
   

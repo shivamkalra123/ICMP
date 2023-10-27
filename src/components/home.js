@@ -1,7 +1,7 @@
 import React from 'react'
 import '../comp_css/home.css'
 import '../components/nav'
-import Gallery from './gallery'
+import Gallery from '../components/gallery'
 import Navbar from '../components/nav'
 import Footer from './footer'
 
@@ -32,8 +32,9 @@ const Home = () => {
     <a className='admissions' href='#'>Admissions</a>
       <a className='admissions' href='#'>Know About Us</a>
       </div>
+    
       <Gallery/>
-      <Footer/>
+     
     </div>
     
   )

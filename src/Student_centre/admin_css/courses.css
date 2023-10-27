@@ -1,84 +1,8 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 50px;
-    width: 80%;
-  
-    margin-left: 10%;
-    
-  }
-.count{
-  
-  background-color: #e5e5ff;
-  height: 100vh;
-}
-.courseHeading{
-  font-family: 'Darker Grotesque', sans-serif;
-  font-size: 50px;
-  margin-left: 10%;
-  padding: 20px 20px;
-
-}
-
-  .table-heading {
-    grid-column: 1 / span 2;
-    gap:20px;
-
-  
-  }
- 
-  
-  
-  
-  
-  /* custom.css */
-/* custom.css */
-.table-heading th {
-  background-color: rgb(47, 223, 236);
-  color: white;
-
-  width: 50%; /* Set the width of the heading cells to 50% */
-}
-.column-border th{
- background-color: transparent;
-  color: black;
-}
-.column-border th,
-.column-border td {
-  border: solid rgb(0, 0, 0,0.2) 1px;
-  text-align: center;
-
-  width: 50%; /* Set the width of the cells in column-border to 50% */
-}
-table {
-  width: 40%;
-  border-collapse: collapse;
-  border: 1px solid rgb(82, 78, 78);
-  margin: auto;
-}
-
-th, td {
-  border-bottom: 1px solid black;
-  padding: 2.5vh;
-}
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-  background-color: blueviolet;
-}
-
-td {
-  text-align: left;
+.course-table{
+  width: 80%;
   text-align: center;
 }
-
-
-tr:last-child {
-  font-weight: bold;
-  background-color: blueviolet;
-  color: white;
+.course-tabl{
+  margin-left: 20%;
+  
 }
