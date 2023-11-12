@@ -12,6 +12,8 @@ import graduation from './Student_centre/graduation';
 import AddDropCourses from './Student_centre/addCourses';
 import Courses from './Student_centre/Courses';
 import AddDropPage from './Student_centre/addCourses';
+import courseTable from './Student_centre/courseTable';
+
 
 
 
@@ -30,7 +32,9 @@ const App = () => {
         <Route exact path="/graduation" component={graduation} />
         <Route exact path="/courses" component={Courses} />
         <Route exact path="/addCourse" component={AddDropPage} 
+        
         />
+        <Route path="/selectedSubCourses" component={courseTable} />
         {/* Add more routes as needed */}
       </Switch>
       

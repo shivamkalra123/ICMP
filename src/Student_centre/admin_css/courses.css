@@ -40,8 +40,13 @@ td a{
     color: black;
     
 }
-
+th{
+  color: black;
+}
 
 .course-list-table tr:nth-child(odd) {
-  background-color: aqua; /* Adjust the width as per your preference */
+  background-color: rgb(62, 175, 255);
+  color: white;
+  text-decoration: none;
+   /* Adjust the width as per your preference */
 }

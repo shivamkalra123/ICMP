@@ -1,68 +1,74 @@
-// CoursePage.js
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../Student_centre/admin_css/courses.css';
 import ParentComponent from './admin_nav';
-
-const SubCourseList = ({ subCourses, handleCheckboxChange }) => {
-  return (
-    <ul className="sub-course-list">
-    {subCourses.map(subCourse => (
-      <li key={subCourse.id}>
-        <input 
-          type="checkbox" 
-          checked={subCourse.checked}
-          onChange={() => handleCheckboxChange(subCourse)}
-        />
-         <a href="#">{subCourse.name}</a>
-          <p>{subCourse.description}</p>
-      
-      </li>
-    ))}
-  </ul>
-  );
-};
-
-const CourseList = ({ courses, handleCourseClick, handleCheckboxChange }) => {
-  return (
-    <div className="course-list-container">
-      <table className="course-list-table">
-        <thead>
-          <tr>
-            <th>Course</th>
-            <th>Title</th>
-          </tr>
-        </thead>
-        <tbody>
-          {courses.map(course => (
-            <tr key={course.id}>
-              <td>
-                <a href="#" onClick={(e) => handleCourseClick(e, course)}>{course.name}</a>
-                {course.expanded && (
-            <SubCourseList subCourses={course.subCourses} handleCheckboxChange={handleCheckboxChange} />
-          )}
-              </td>
-              <td>{course.title}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-     
-    </div>
-  );
-};
-
+import CourseTable from './courseTable'; // Make sure the path is correct
 
 const CoursePage = () => {
-  const [courses, setCourses] = useState([
+  const [courses] = useState([
     {
       id: 1,
       name: 'CS50',
       title: 'Introduction to Computer Science',
       expanded: false,
       subCourses: [
-        { id: 11, name: 'Fundamentals of Programming', title: 'CS50x', description: 'Introduction to the intellectual enterprises of computer science and the art of programming.' , checked: false},
-        { id: 12, name: 'Web Development', title: 'CS50 Web', description: 'Learn to design and develop dynamic, secure, and high-performance web applications.', checked: false },
+        // ... (previous subcourses)
+        {
+          id: 14,
+          name: 'Algorithms',
+          title: 'CS50 Algorithms',
+          description: 'Study of algorithms and their computational complexity.',
+          summary: 'Explores algorithm design and analysis techniques.',
+          checked: false
+        },
+        {
+          id: 15,
+          name: 'Artificial Intelligence',
+          title: 'CS50 AI',
+          description: 'Introduction to the principles and practices of artificial intelligence.',
+          summary: 'Covers topics such as machine learning and natural language processing.',
+          checked: false
+        },
+        {
+          id: 16,
+          name: 'Computer Networks',
+          title: 'CS50 Networks',
+          description: 'Fundamentals of computer networking and data communication.',
+          summary: 'Explores protocols, architectures, and network programming.',
+          checked: false
+        },
+        {
+          id: 17,
+          name: 'Software Engineering',
+          title: 'CS50 Software Engineering',
+          description: 'Introduction to software engineering principles and practices.',
+          summary: 'Covers topics such as software design, testing, and project management.',
+          checked: false
+        },
+        {
+          id: 18,
+          name: 'Cybersecurity',
+          title: 'CS50 Cybersecurity',
+          description: 'Study of techniques for securing computer systems and networks.',
+          summary: 'Explores topics such as cryptography, network security, and ethical hacking.',
+          checked: false
+        },
+        {
+          id: 19,
+          name: 'Mobile App Development',
+          title: 'CS50 Mobile',
+          description: 'Introduction to mobile app development for iOS and Android.',
+          summary: 'Covers mobile UI/UX design and development using popular frameworks.',
+          checked: false
+        },
+        {
+          id: 20,
+          name: 'Database Systems',
+          title: 'CS50 Databases',
+          description: 'Fundamentals of database systems and data management.',
+          summary: 'Explores relational databases, SQL, and database design principles.',
+          checked: false
+        },
       ]
     },
     {
@@ -71,76 +77,109 @@ const CoursePage = () => {
       title: 'Principles of Economics',
       expanded: false,
       subCourses: [
-        { id: 21, name: 'Microeconomics', title: 'ECON 1011', description: 'Introduction to microeconomic theory and policy analysis.', checked: false },
-        { id: 22, name: 'Macroeconomics', title: 'ECON 1012', description: 'Introduction to macroeconomic theory and policy analysis.', checked: false },
+        // ... (previous subcourses)
+        {
+          id: 24,
+          name: 'Labor Economics',
+          title: 'ECON 1014',
+          description: 'Study of the labor market and employment dynamics.',
+          summary: 'Examines issues such as wages, unemployment, and workforce policies.',
+          checked: false
+        },
+        {
+          id: 25,
+          name: 'Behavioral Economics',
+          title: 'ECON 1015',
+          description: 'Integration of insights from psychology into economic theory.',
+          summary: 'Explores how psychological factors influence economic decision-making.',
+          checked: false
+        },
+        {
+          id: 26,
+          name: 'Environmental Economics',
+          title: 'ECON 1016',
+          description: 'Application of economic principles to environmental issues.',
+          summary: 'Examines topics such as pollution, natural resource management, and sustainability.',
+          checked: false
+        },
+        {
+          id: 27,
+          name: 'Health Economics',
+          title: 'ECON 1017',
+          description: 'Study of the economics of healthcare systems and policies.',
+          summary: 'Explores issues such as healthcare financing, insurance, and access.',
+          checked: false
+        },
+        {
+          id: 28,
+          name: 'Development Economics',
+          title: 'ECON 1018',
+          description: 'Analysis of economic development and global inequality.',
+          summary: 'Covers topics such as poverty, economic growth, and international trade.',
+          checked: false
+        },
+        {
+          id: 29,
+          name: 'Public Economics',
+          title: 'ECON 1019',
+          description: 'Study of government economic policies and their impact on society.',
+          summary: 'Examines taxation, public spending, and welfare economics.',
+          checked: false
+        },
+        {
+          id: 30,
+          name: 'Game Theory',
+          title: 'ECON 1020',
+          description: 'Introduction to the study of strategic decision-making.',
+          summary: 'Explores applications in economics, politics, and other fields.',
+          checked: false
+        },
       ]
     },
-    {
-      id: 3,
-      name: 'PSYCH 1',
-      title: 'Introduction to Psychology',
-      expanded: false,
-      subCourses: [
-        { id: 31, name: 'Social Psychology', title: 'PSYCH 15', description: 'Introduction to the systematic study of human behavior in social contexts.', checked: false },
-        { id: 32, name: 'Abnormal Psychology', title: 'PSYCH 16', description: 'Introduction to the understanding and treatment of psychological disorders.', checked: false },
-      ]
-    },
-    {
-      id: 4,
-      name: 'PHIL 1',
-      title: 'Introduction to Philosophy',
-      expanded: false,
-      subCourses: [
-        { id: 41, name: 'Ethics', title: 'PHIL 21', description: 'Introduction to fundamental problems in moral philosophy.', checked: false },
-        { id: 42, name: 'Metaphysics', title: 'PHIL 22', description: 'Introduction to the study of reality, existence, and identity.', checked: false },
-      ]
-    }
   ]);
 
+  const [selectedCourse, setSelectedCourse] = useState(null);
   const history = useHistory();
 
-  const handleCourseClick = (e, clickedCourse) => {
-    e.preventDefault();
-    setCourses(prevCourses => prevCourses.map(course => ({
-      ...course,
-      expanded: course.id === clickedCourse.id ? !course.expanded : false
-    })));
-  };
+  const handleCourseClick = (clickedCourse) => {
+    setSelectedCourse(clickedCourse);
 
-  const handleCheckboxChange = (subCourse) => {
-    setCourses(prevCourses => prevCourses.map(course => ({
-      ...course,
-      subCourses: course.subCourses.map(sc => 
-        sc.id === subCourse.id ? { ...sc, checked: !sc.checked } : sc
-      )
-    })));
-  };
-
-  const handleSubCourseClick = () => {
-    const selectedSubCourses = courses.flatMap(course => 
-      course.subCourses.filter(subCourse => subCourse.checked)
-    );
-    const data = {
-      selectedSubCourses
-    };
+    // Redirect to CourseTable page
     history.push({
-      pathname: '/addCourse',
-      state: { data }
+      pathname: '/selectedSubCourses',
+      state: { selectedSubCourses: clickedCourse.subCourses }
     });
   };
 
   return (
     <div className="course-page">
-   <ParentComponent/>
+      <ParentComponent />
       <div className="course-content">
         <div className="course-list-container">
           <h2>Courses</h2>
-          <CourseList courses={courses} handleCourseClick={handleCourseClick} handleCheckboxChange={handleCheckboxChange} />
+          <table className="course-list-table">
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Title</th>
+              </tr>
+            </thead>
+            <tbody>
+              {courses.map(course => (
+                <tr key={course.id}>
+                  <td>
+                    <button onClick={() => handleCourseClick(course)}>
+                      {course.name}
+                    </button>
+                  </td>
+                  <td>{course.title}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-        <div className="sub-course-list-container">
-          
-                  <button className='selected_course' onClick={handleSubCourseClick}>Add Selected Courses</button>
-        </div>
+        {/* Render CourseTable component only when a course is selected */}
+        {selectedCourse && <CourseTable location={{ state: { data: selectedCourse.subCourses } }} />}
       </div>
     </div>
   );
