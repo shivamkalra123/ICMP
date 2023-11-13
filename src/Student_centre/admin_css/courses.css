@@ -37,7 +37,7 @@ button.selected_course{
     margin-top: 2%;
 }
 td a{
-    color: black;
+   cursor: pointer;
     
 }
 th{
@@ -47,6 +47,6 @@ th{
 .course-list-table tr:nth-child(odd) {
   background-color: rgb(62, 175, 255);
   color: white;
-  text-decoration: none;
+ 
    /* Adjust the width as per your preference */
 }

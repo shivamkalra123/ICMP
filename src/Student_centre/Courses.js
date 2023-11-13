@@ -168,9 +168,9 @@ const CoursePage = () => {
               {courses.map(course => (
                 <tr key={course.id}>
                   <td>
-                    <button onClick={() => handleCourseClick(course)}>
+                    <a onClick={() => handleCourseClick(course)}>
                       {course.name}
-                    </button>
+                    </a>
                   </td>
                   <td>{course.title}</td>
                 </tr>
