@@ -1,46 +1,32 @@
-import React, { useState } from 'react';
+// Student_centre/addCourses.js
+
+import React from 'react';
+import { useCourseContext } from './CourseContext';
 import { FaTrash } from 'react-icons/fa';
-import ParentComponent from '../Student_centre/admin_nav'
 
-const AddCourse = (props) => {
-  const { selectedCourses, selectedSubCourses } = props.location.state.data;
-
-  const [coursesData, setCoursesData] = useState({
-    selectedCourses,
-    selectedSubCourses
-  });
-
-  const handleDeleteRow = (index) => {
-    const updatedSelectedCourses = [...coursesData.selectedCourses];
-    const updatedSelectedSubCourses = [...coursesData.selectedSubCourses];
-
-    updatedSelectedCourses.splice(index, 1);
-    updatedSelectedSubCourses.splice(index, 1);
-
-    setCoursesData({
-      selectedCourses: updatedSelectedCourses,
-      selectedSubCourses: updatedSelectedSubCourses
-    });
-  };
+const AddCourse = () => {
+  const { addedCourses, removeCourse } = useCourseContext();
 
   return (
     <div>
-      <ParentComponent/>
-      <table className='course-list-table'>
+      <h2>Added Courses</h2>
+      <table className='added-courses-table'>
         <thead>
           <tr>
-            <th>Courses</th>
-            <th>SubCourses</th>
+            <th>Course</th>
+            <th>Summary</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          {coursesData.selectedCourses.map((course, index) => (
-            <tr key={course.id}>
-              <td>{course.name}</td>
-              <td>{coursesData.selectedSubCourses[index].name}</td>
+          {addedCourses.map((course, index) => (
+            <tr key={index}>
+              <td>{course.title}</td>
+              <td>{course.summary}</td>
               <td>
-                <FaTrash onClick={() => handleDeleteRow(index)} />
+                <button onClick={() => removeCourse(index)}>
+                  <FaTrash />
+                </button>
               </td>
             </tr>
           ))}

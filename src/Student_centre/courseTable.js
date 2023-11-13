@@ -1,20 +1,29 @@
+// Student_centre/courseTable.js
+
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useCourseContext } from './CourseContext';
 
 const CourseTable = ({ location }) => {
+  const { addCourse } = useCourseContext();
   const selectedSubCourses = location.state?.selectedSubCourses || [];
-
   const [expandedSubCourses, setExpandedSubCourses] = useState([]);
 
   const handleSubCourseClick = (subCourseId) => {
     setExpandedSubCourses((prevExpandedSubCourses) => {
       if (prevExpandedSubCourses.includes(subCourseId)) {
-        // If already expanded, collapse it
         return prevExpandedSubCourses.filter((id) => id !== subCourseId);
       } else {
-        // If not expanded, expand it
         return [...prevExpandedSubCourses, subCourseId];
       }
     });
+  };
+
+  const handleAddCourseClick = (subCourse) => {
+    console.log('Adding course:', subCourse);
+    addCourse(subCourse);
+    setExpandedSubCourses([]);
+    alert('Course added successfully!');
   };
 
   return (
@@ -24,35 +33,45 @@ const CourseTable = ({ location }) => {
         <thead>
           <tr>
             <th>Course</th>
-            <th>Title</th>
+            <th>Description</th>
           </tr>
         </thead>
         <tbody>
           {selectedSubCourses.map((subCourse) => (
             <React.Fragment key={subCourse.id}>
-              <tr>
+              <tr style={{ height: expandedSubCourses.includes(subCourse.id) ? 'auto' : '50px' }}>
                 <td
                   onClick={() => handleSubCourseClick(subCourse.id)}
-                  colSpan={2} // Make the title span both columns
                   style={{ cursor: 'pointer' }}
                 >
                   {subCourse.title}
                 </td>
+                <td>{subCourse.description}</td>
               </tr>
               {expandedSubCourses.includes(subCourse.id) && (
-                <tr>
-                  <td colSpan={2}>
-                    <div>
-                      <h1>{subCourse.title} - {subCourse.description}</h1>
-                      <p>{subCourse.summary}</p>
-                    </div>
-                  </td>
-                </tr>
+                <React.Fragment>
+                  <tr>
+                    <td colSpan={2}>
+                      <div>
+                        <h3>{subCourse.title}</h3>
+                        <p>{subCourse.summary}</p>
+                        <button onClick={() => handleAddCourseClick(subCourse)}>
+                          Add Course
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </React.Fragment>
               )}
             </React.Fragment>
           ))}
         </tbody>
       </table>
+
+      {/* Add a button to redirect to AddCourse page */}
+      <Link to="/addCourse">
+        <button>Add Course</button>
+      </Link>
     </div>
   );
 };
