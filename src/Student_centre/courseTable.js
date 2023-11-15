@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCourseContext } from './CourseContext';
+import ParentComponent from './admin_nav'
 
 const CourseTable = ({ location }) => {
   const { addCourse } = useCourseContext();
@@ -28,7 +29,10 @@ const CourseTable = ({ location }) => {
 
   return (
     <div>
+      <div  className='course-content'>
       <h2>Selected Courses</h2>
+      </div>
+      <ParentComponent/>
       <table className='course-list-table'>
         <thead>
           <tr>
@@ -55,8 +59,8 @@ const CourseTable = ({ location }) => {
                       <div>
                         <h3>{subCourse.title}</h3>
                         <p>{subCourse.summary}</p>
-                        <button onClick={() => handleAddCourseClick(subCourse)}>
-                          Add Course
+                        <button className='addcourse' onClick={() => handleAddCourseClick(subCourse)}>
+                          Save To Worklist
                         </button>
                       </div>
                     </td>
@@ -69,9 +73,7 @@ const CourseTable = ({ location }) => {
       </table>
 
       {/* Add a button to redirect to AddCourse page */}
-      <Link to="/addCourse">
-        <button>Add Course</button>
-      </Link>
+    
     </div>
   );
 };

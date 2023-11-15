@@ -9,7 +9,10 @@
   table-layout: fixed;
  
 }
-
+.course-content{
+  margin-left: 10%;
+  padding: 20px 10px;
+}
 .course-list-table th,
 .course-list-table td {
  
@@ -49,4 +52,13 @@ th{
   color: white;
  
    /* Adjust the width as per your preference */
+}
+button.addcourse{
+  background-color: rgb(0, 124, 191);
+  padding: 10px 14px;
+  color: white;
+  border: none;
+  margin-top: 2%;
+
+
 }

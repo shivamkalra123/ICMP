@@ -20,6 +20,10 @@ const SideNavBar = () => {
         <FaBookOpen  />
         Courses
       </Link>
+      <Link to="/addCourse" href="#">
+        <FaBookOpen  />
+        Add/Drop Courses
+      </Link>
   
       <a href="#">
         <FaMap />
