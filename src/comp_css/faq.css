@@ -41,7 +41,7 @@ details div {
   border-bottom: 2px solid #000;
   padding: 1.5em;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+
 }
 
 details div > * + * {
@@ -65,27 +65,13 @@ summary {
   padding: 1.5em 1em;
   cursor: pointer;
   position: relative;
-  padding-left: calc(1.75rem + .75rem + .75rem);
-  background-color: #0068ad;
+  padding-left: calc(1.75rem);
+  background-color: #1d8dd8;
   color: white;
-  transition: background-color 0.3s ease-out; /* Add the transition property for background-color */
+  /* Add the transition property for background-color */
 }
 
-summary:before {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: .75rem;
-  content: "↓";
-  width: 1.75rem;
-  height: 1.75rem;
-  background-color: #000;
-  color: #FFF;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-}
+
 
 details[open] summary {
   background-color: #0068ad;
@@ -93,12 +79,9 @@ details[open] summary {
 
 details[open] {
   max-height: 1000px; /* Set a large max-height to allow for smooth transition */
-  transition: max-height 0.7s ease-out; /* Add the transition property for max-height */
+   /* Add the transition property for max-height */
 }
 
-details[open] summary:before {
-  content: "↑";
-}
 
 code {
   font-family: monospace;
