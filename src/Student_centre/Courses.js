@@ -154,9 +154,9 @@ const CoursePage = () => {
   return (
     <div className="course-page">
       <ParentComponent />
-      <div className="course-content">
+      <div>
         <div className="course-list-container">
-          <h2>Courses</h2>
+        
           <table className="course-list-table">
             <thead>
               <tr>
