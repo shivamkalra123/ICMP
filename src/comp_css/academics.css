@@ -1,0 +1,238 @@
+.about1 {
+  background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+}
+
+.overlay1 {
+  background-color: rgba(0, 0, 0, 0.5); /* Use rgba for transparency */
+  width: 100%;
+  height: 60%;
+}
+.headerLinks{
+  font-family: sans-serif;
+  margin-top: 5%;
+  margin-left: 5%;
+
+}
+.Headlinks{
+  color: blue;
+  padding: 10px;
+  cursor: pointer;
+ 
+}
+.allLinks{
+  margin-left: 4.2%;
+ margin-top: 1px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.heade{
+  margin-left: 25%;
+  font-size: 48px;
+position: absolute;
+  top: 120%;
+ 
+}
+.subHead{
+  position: absolute;
+  top: 140%;
+  width: 70%;
+  left: 25%;
+  opacity: 0.7;
+}
+.resources{
+  margin-top: 10%;
+  text-align: center;
+  background-color: rgb(224, 223, 223);
+  height: 110vh;
+}
+.presources{
+  padding-top: 40px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+.presources1{
+  padding-top: 20px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+.hresources{
+  font-size: 50px;
+}
+article {
+  --img-scale: 1.001;
+  --title-color: rgb(255, 255, 255);
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  margin-top: 20%;
+  background-color:rgb(0, 109, 128);
+  color: white;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+/* basic article elements styling */
+article h2 {
+  margin: 0 0 18px 0;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+article img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+  padding: 24px;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+}
+
+article a:focus {
+  outline: 1px dotted #28666e;
+}
+
+article a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #ffffff;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.articles {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+@media screen and (max-width: 960px) {
+  article {
+    container: card/inline-size;
+  }
+  .article-body p {
+    display: none;
+  }
+}
+
+@container card (min-width: 380px) {
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+  .article-body {
+    padding-left: 0;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  figure img {
+    height: 1020%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+.Institue{
+  background-color: #2e6ab4;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+.pinstitute{
+  width: 70%;
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left:15%;
+}
+hr{
+  width: 10%;
+  size: 10;
+  margin-left: 45%;
+}
+.read_more{
+  border: solid rgb(255, 255, 255) 1px;
+  padding: 10px 30px;
+  color: white;
+ 
+}
+.ainstitue{
+  margin-top: 3%;
+}
+.academics{
+  width: 50%;
+  margin-top: 40px;
+}

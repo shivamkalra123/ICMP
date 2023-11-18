@@ -1,7 +1,5 @@
-// App.js
-
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import Home from './components/home';
 import Faq from './components/faq';
 import About from './components/About';
@@ -13,8 +11,17 @@ import Courses from './Student_centre/Courses';
 import courseTable from './Student_centre/courseTable';
 import AddCourse from './Student_centre/addCourses';
 import { CourseProvider } from './Student_centre/CourseContext';
+import Academics from './components/Academics';
 
 const App = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Dynamically set the document title based on the current route
+    const route = location.pathname.substring(1);
+    document.title = route.charAt(0).toUpperCase() + route.slice(1);
+  }, [location]);
+
   return (
     <Router>
       <CourseProvider>
@@ -29,6 +36,7 @@ const App = () => {
           <Route exact path="/courses" component={Courses} />
           <Route path="/addCourse" component={AddCourse} />
           <Route path="/selectedSubCourses" component={courseTable} />
+          <Route path="/academic" component={Academics} />
         </Switch>
       </CourseProvider>
     </Router>

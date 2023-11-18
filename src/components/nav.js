@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="trapezium">
             <div className="search-container">
               <ul className='nav-links'>
-                <li><a className='b' href='#'>Academics</a> </li>
+                <li><Link className='b' to='/academic'>Academics</Link> </li>
                 <li><a className='b' href='#'>Strategic</a> </li>
                 <li><a className='b' href='#'>Priorities</a> </li>
                 <li><a className='b' href='#'>Research</a> </li>
