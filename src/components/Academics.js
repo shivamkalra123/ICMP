@@ -50,7 +50,7 @@ const Academics = () => {
           goals.
         </p>
         <section class="articles">
-          <article>
+          <article className="article">
             <div class="article-wrapper">
               <figure>
                 <img src="https://picsum.photos/id/1011/800/450" alt="" />
@@ -82,7 +82,7 @@ const Academics = () => {
               </div>
             </div>
           </article>
-          <article>
+          <article className="article">
             <div class="article-wrapper">
               <figure>
                 <img src="https://picsum.photos/id/1005/800/450" alt="" />

@@ -1,17 +1,25 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
-import Home from './components/home';
-import Faq from './components/faq';
-import About from './components/About';
-import Health from './components/health';
-import login from './components/login';
-import student_centre from './Student_centre/student_centre';
-import graduation from './Student_centre/graduation';
-import Courses from './Student_centre/Courses';
-import courseTable from './Student_centre/courseTable';
-import AddCourse from './Student_centre/addCourses';
-import { CourseProvider } from './Student_centre/CourseContext';
-import Academics from './components/Academics';
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useLocation,
+} from "react-router-dom";
+import Home from "./components/home";
+import Faq from "./components/faq";
+import About from "./components/About";
+import Health from "./components/health";
+import login from "./components/login";
+import student_centre from "./Student_centre/student_centre";
+import graduation from "./Student_centre/graduation";
+import Courses from "./Student_centre/Courses";
+import courseTable from "./Student_centre/courseTable";
+import AddCourse from "./Student_centre/addCourses";
+import { CourseProvider } from "./Student_centre/CourseContext";
+import Academics from "./components/Academics";
+import Strategic from "./components/Strategy";
+import News from "./components/News";
+import Research from "./components/Research";
 
 const App = () => {
   const location = useLocation();
@@ -37,6 +45,9 @@ const App = () => {
           <Route path="/addCourse" component={AddCourse} />
           <Route path="/selectedSubCourses" component={courseTable} />
           <Route path="/academic" component={Academics} />
+          <Route path="/strategy" component={Strategic} />
+          <Route path="/news" component={News} />
+          <Route path="/research" component={Research} />
         </Switch>
       </CourseProvider>
     </Router>
